@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 90" role="img" aria-labelledby="title desc">
+  <title id="title">Cockroach Janta Party</title>
+  <desc id="desc">Cockroach icon with Cockroach Janta Party wordmark, Hindi text, and Est. 2026.</desc>
+  <rect width="760" height="90" fill="#f6ead0"/>
+  <g transform="translate(18 10)">
+    <circle cx="35" cy="35" r="32" fill="none" stroke="#1f1a14" stroke-width="2.2"/>
+    <path d="M28 30c0-9 4-17 10-17s10 8 10 17v20c0 9-5 15-10 15s-10-6-10-15V30z" fill="#6b3b14" stroke="#17120d" stroke-width="2.5"/>
+    <path d="M25 35H13M51 35h12M27 48H15M49 48h12M31 22 21 10M45 22 55 10" stroke="#17120d" stroke-width="2" stroke-linecap="round"/>
+    <path d="M38 15V7" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(95 8)">
+    <text x="0" y="26" fill="#17120d" font-family="Arial Black, Impact, sans-serif" font-size="28" font-weight="900" letter-spacing="-1">COCKROACH</text>
+    <text x="0" y="54" fill="#17120d" font-family="Arial Black, Impact, sans-serif" font-size="28" font-weight="900" letter-spacing="-1">JANTA PARTY</text>
+    <text x="0" y="78" fill="#b91c1c" font-family="Noto Sans Devanagari, Mangal, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">कॉकरोच जनता पार्टी</text>
+    <text x="265" y="78" fill="#b91c1c" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">· EST. 2026</text>
+  </g>
+</svg>

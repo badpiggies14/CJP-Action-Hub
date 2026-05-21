@@ -1,0 +1,7 @@
+Display style: bold condensed poster type.
+Body style: clean sans serif.
+Editorial accent: newspaper-style serif.
+Paper: #f6ead0
+Ink: #111111
+Stamp red: #b91c1c
+Ochre accent: #c78b2b

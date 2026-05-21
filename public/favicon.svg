@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cockroach Janta Party">
+  <rect width="64" height="64" fill="#f6ead0"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#111111" stroke-width="3"/>
+  <path d="M24 27c0-9 4-17 8-17s8 8 8 17v18c0 7-4 11-8 11s-8-4-8-11V27z" fill="#6b3b14" stroke="#111111" stroke-width="3"/>
+  <path d="M22 31H10M42 31h12M24 44H12M40 44h12M26 20 17 9M38 20 47 9" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 12V5" stroke="#b91c1c" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f6ead0"/>
+  <rect x="64" y="64" width="952" height="1792" fill="none" stroke="#111" stroke-width="14"/>
+  <text x="540" y="245" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="92" fill="#111">THE SWARM</text>
+  <text x="540" y="350" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="92" fill="#111">HAS ENTERED</text>
+  <text x="540" y="455" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="92" fill="#111">THE CHAT</text>
+  <rect x="162" y="735" width="756" height="300" fill="none" stroke="#b91c1c" stroke-width="12"/>
+  <text x="540" y="895" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#b91c1c">Story template</text>
+  <text x="540" y="1730" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#111">Independent supporter-made graphic</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#f6ead0"/>
+  <circle cx="540" cy="500" r="360" fill="none" stroke="#111" stroke-width="28"/>
+  <circle cx="540" cy="500" r="410" fill="none" stroke="#b91c1c" stroke-width="14" stroke-dasharray="42 24"/>
+  <rect x="120" y="865" width="840" height="92" fill="#111"/>
+  <text x="540" y="928" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="58" fill="#f6ead0">HELP THE SWARM GROW</text>
+</svg>
