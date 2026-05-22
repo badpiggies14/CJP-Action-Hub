@@ -3,7 +3,7 @@ export type CaptionTone = "Funny" | "Serious" | "Angry but clean" | "Youthful" |
 export type CaptionTopic =
   | "Follow the movement"
   | "Five demands"
-  | "Volunteer"
+  | "Creator kit"
   | "Share a meme"
   | "Read manifesto";
 
@@ -25,7 +25,7 @@ export const captionTones: CaptionTone[] = [
 export const captionTopics: CaptionTopic[] = [
   "Follow the movement",
   "Five demands",
-  "Volunteer",
+  "Creator kit",
   "Share a meme",
   "Read manifesto"
 ];
@@ -85,10 +85,10 @@ const topicClosers: Record<CaptionTopic, string[]> = {
     "Five demands. Zero sponsors. Plenty of questions.",
     "The manifesto is short enough to read and sharp enough to discuss."
   ],
-  Volunteer: [
-    "Design, edit, translate, research, organize - pick one skill and help cleanly.",
-    "Five minutes is enough to volunteer one useful skill.",
-    "Movements need spreadsheets and captions too."
+  "Creator kit": [
+    "Open the creator kit, make one clean asset, and mark it supporter-made.",
+    "Five minutes is enough to download a template and share responsibly.",
+    "Movements need captions, cards, and clean source links too."
   ],
   "Share a meme": [
     "Make it funny, keep it clean, and mark supporter-made graphics clearly.",

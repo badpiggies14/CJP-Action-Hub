@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 export default function ToolsPage() {
   return (
     <>
-      <section className="border-b-2 border-ink bg-newsprint py-14">
+      <section className="border-b-2 border-ink bg-newsprint py-8 sm:py-14">
         <div className="section-shell">
           <h1 className="section-title">Tools for the Swarm.</h1>
-          <p className="mt-4 max-w-3xl text-lg font-bold leading-relaxed text-coal">
+          <p className="mt-3 max-w-3xl text-sm font-bold leading-relaxed text-coal sm:mt-4 sm:text-lg">
             Make cards, copy captions, track local progress, and share responsibly. Everything runs in your browser.
           </p>
         </div>
@@ -24,10 +24,10 @@ export default function ToolsPage() {
       <ShareCardGenerator />
       <CaptionGenerator />
       <ActionCards compact />
-      <section className="section-shell py-16">
+      <section className="section-shell py-10 sm:py-16">
         <ProgressChecklist />
       </section>
-      <section className="section-shell pb-16">
+      <section className="section-shell pb-10 sm:pb-16">
         <Disclaimer />
       </section>
     </>

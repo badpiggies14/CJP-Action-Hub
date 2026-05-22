@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     template: "%s | CJP Action Hub"
   },
   description:
-    "Independent community toolkit to follow, share, volunteer, and create for the Cockroach Janta Party movement.",
+    "Independent community toolkit to follow, share, and create for the Cockroach Janta Party movement.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "CJP Action Hub",
     description:
-      "Independent community toolkit to follow, share, volunteer, and create for the Cockroach Janta Party movement.",
+      "Independent community toolkit to follow, share, and create for the Cockroach Janta Party movement.",
     url: "/",
     siteName: "CJP Action Hub",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: "CJP Action Hub" }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CJP Action Hub",
     description:
-      "Independent community toolkit to follow, share, volunteer, and create for the Cockroach Janta Party movement.",
+      "Independent community toolkit to follow, share, and create for the Cockroach Janta Party movement.",
     images: ["/og.svg"]
   },
   icons: {

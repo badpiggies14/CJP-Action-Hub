@@ -12,7 +12,7 @@ export const theme = {
     "Together We Survive",
     "Five Demands. Zero Sponsors.",
     "Headquartered Wherever The WiFi Works.",
-    "Follow. Share. Volunteer. Create."
+    "Follow. Share. Create. Verify."
   ],
   stats: [
     { value: "5", label: "Demands" },

@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What is CJP Action Hub?",
     answer:
-      "CJP Action Hub is an independent community support toolkit for people who want to follow official channels, create supporter-made graphics, understand the manifesto, and volunteer skills."
+      "CJP Action Hub is an independent community support toolkit for people who want to follow official channels, create supporter-made graphics, and understand the manifesto."
   },
   {
     question: "Is this official?",
@@ -34,29 +34,29 @@ const faqs = [
   {
     question: "Who should use this hub?",
     answer:
-      "Supporters, creators, volunteers, and curious readers who want clean, transparent, non-abusive community resources."
+      "Supporters, creators, and curious readers who want clean, transparent, non-abusive community resources."
   }
 ];
 
 export default function PressPage() {
   return (
     <>
-      <section className="border-b-2 border-ink bg-newsprint py-14">
+      <section className="border-b-2 border-ink bg-newsprint py-8 sm:py-14">
         <div className="section-shell">
           <h1 className="section-title">Press / Explainer.</h1>
-          <p className="mt-4 max-w-3xl text-lg font-bold leading-relaxed text-coal">
+          <p className="mt-3 max-w-3xl text-sm font-bold leading-relaxed text-coal sm:mt-4 sm:text-lg">
             A serious page for the obvious question: what is this, and what is it not?
           </p>
         </div>
       </section>
-      <section className="section-shell grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
+      <section className="section-shell grid gap-5 py-10 sm:gap-8 sm:py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <PosterCard className="h-fit !bg-ink !text-paper">
           <p className="font-body text-sm font-black uppercase tracking-[0.16em] text-paper/70">Press card</p>
-          <h2 className="mt-3 font-display text-5xl font-black uppercase leading-none">CJP Action Hub</h2>
+          <h2 className="mt-3 font-display text-4xl font-black uppercase leading-none sm:text-5xl">CJP Action Hub</h2>
           <dl className="mt-6 grid gap-4 text-sm font-bold leading-relaxed">
             <div>
               <dt className="font-black uppercase text-paper/70">Purpose</dt>
-              <dd>Independent community toolkit for following, sharing, volunteering, and creating responsibly.</dd>
+              <dd>Independent community toolkit for following, sharing, and creating responsibly.</dd>
             </div>
             <div>
               <dt className="font-black uppercase text-paper/70">Launch status</dt>
@@ -87,12 +87,12 @@ export default function PressPage() {
         <div className="grid gap-5">
           {faqs.map((item) => (
             <PosterCard key={item.question}>
-              <h2 className="font-display text-4xl font-black uppercase leading-none">{item.question}</h2>
-              <p className="mt-3 text-base font-bold leading-relaxed text-coal">{item.answer}</p>
+              <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-4xl">{item.question}</h2>
+              <p className="mt-3 text-sm font-bold leading-relaxed text-coal sm:text-base">{item.answer}</p>
             </PosterCard>
           ))}
           <PosterCard>
-            <h2 className="font-display text-4xl font-black uppercase leading-none">What are the five demands?</h2>
+            <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-4xl">What are the five demands?</h2>
             <ol className="mt-5 grid gap-3 text-sm font-bold leading-relaxed">
               {manifestoDemands.map((demand) => (
                 <li key={demand.id}>

@@ -6,7 +6,7 @@ export type ProgressId =
   | "copied-caption"
   | "read-demands"
   | "shared-friend"
-  | "volunteered";
+  | "used-creator-kit";
 
 export type ProgressMap = Record<ProgressId, boolean>;
 
@@ -16,7 +16,7 @@ export const progressItems: Array<{ id: ProgressId; label: string }> = [
   { id: "copied-caption", label: "I copied a caption" },
   { id: "read-demands", label: "I read the five demands" },
   { id: "shared-friend", label: "I shared with a friend" },
-  { id: "volunteered", label: "I volunteered a skill" }
+  { id: "used-creator-kit", label: "I opened the creator kit" }
 ];
 
 export const defaultProgress: ProgressMap = {
@@ -25,7 +25,7 @@ export const defaultProgress: ProgressMap = {
   "copied-caption": false,
   "read-demands": false,
   "shared-friend": false,
-  volunteered: false
+  "used-creator-kit": false
 };
 
 export function readProgress(): ProgressMap {

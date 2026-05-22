@@ -115,16 +115,16 @@ export default function ManifestoCards({ preview = false }: { preview?: boolean 
   }
 
   return (
-    <section className="section-shell py-16" aria-labelledby={preview ? "manifesto-preview-title" : "manifesto-title"}>
-      <div className="mb-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+    <section className="section-shell py-10 sm:py-16" aria-labelledby={preview ? "manifesto-preview-title" : "manifesto-title"}>
+      <div className="mb-5 grid gap-4 sm:mb-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <div>
           <p className="section-kicker">Manifesto in 5 cards</p>
           <h2 id={preview ? "manifesto-preview-title" : "manifesto-title"} className="section-title mt-2">
             The Five Demands.
           </h2>
         </div>
-        <div className="space-y-4">
-          <p className="text-base font-bold leading-relaxed text-coal">
+        <div className="space-y-3 sm:space-y-4">
+          <p className="text-sm font-bold leading-relaxed text-coal sm:text-base">
             Condensed from the official site into shareable editorial cards, with short neutral explainers for context.
           </p>
           <a href={manifestoSource.href} target="_blank" rel="noreferrer" className="button-secondary">
@@ -132,18 +132,18 @@ export default function ManifestoCards({ preview = false }: { preview?: boolean 
           </a>
         </div>
       </div>
-      <div className={preview ? "flex snap-x gap-5 overflow-x-auto pb-5 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3" : "flex snap-x gap-5 overflow-x-auto pb-5 md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-3 2xl:grid-cols-5"}>
+      <div className={preview ? "mobile-rail flex snap-x gap-3 overflow-x-auto pb-5 sm:gap-5 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3" : "mobile-rail flex snap-x gap-3 overflow-x-auto pb-5 sm:gap-5 md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-3 2xl:grid-cols-5"}>
         {demands.map((demand) => (
-          <PosterCard key={demand.id} className="min-w-[82vw] snap-start md:min-w-0">
-            <div className="flex h-full flex-col gap-5">
+          <PosterCard key={demand.id} className="min-w-[78vw] snap-start md:min-w-0">
+            <div className="flex h-full flex-col gap-4 sm:gap-5">
               <div className="min-w-0">
-                <p className="font-display text-8xl font-black leading-none text-stamp">{demand.id}</p>
-                <h3 className="mt-2 min-w-0 break-words font-display text-[2.15rem] font-black uppercase leading-none hyphens-auto xl:text-[2rem] 2xl:text-[1.85rem]">
+                <p className="font-display text-6xl font-black leading-none text-stamp sm:text-8xl">{demand.id}</p>
+                <h3 className="mt-2 min-w-0 break-words font-display text-[1.72rem] font-black uppercase leading-none hyphens-auto sm:text-[2.15rem] xl:text-[2rem] 2xl:text-[1.85rem]">
                   {demand.title}
                 </h3>
-                <p className="safe-text mt-4 text-sm font-bold leading-relaxed text-coal">{demand.demand}</p>
+                <p className="safe-text mt-3 text-sm font-bold leading-relaxed text-coal sm:mt-4">{demand.demand}</p>
               </div>
-              <div className="grid gap-3 border-y-2 border-ink py-4 text-sm">
+              <div className="grid gap-3 border-y-2 border-ink py-3 text-sm sm:py-4">
                 <div>
                   <p className="font-black uppercase text-stamp">What it means</p>
                   <p className="safe-text mt-1 font-bold text-coal">{demand.whatItMeans}</p>

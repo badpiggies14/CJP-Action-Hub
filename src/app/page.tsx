@@ -6,7 +6,6 @@ import ManifestoCards from "@/components/ManifestoCards";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import ProgressChecklist from "@/components/ProgressChecklist";
 import SocialFollowGrid from "@/components/SocialFollowGrid";
-import VolunteerGrid from "@/components/VolunteerGrid";
 
 export default function HomePage() {
   return (
@@ -17,11 +16,10 @@ export default function HomePage() {
       <ManifestoCards preview />
       <CreatorKitPreview />
       <SocialFollowGrid />
-      <section className="section-shell py-16">
+      <section className="section-shell py-10 sm:py-16">
         <ProgressChecklist />
       </section>
-      <VolunteerGrid />
-      <section className="section-shell pb-16">
+      <section className="section-shell pb-10 sm:pb-16">
         <Disclaimer />
       </section>
     </>

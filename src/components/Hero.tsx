@@ -1,51 +1,55 @@
 import Link from "next/link";
-import { ArrowRight, Megaphone, PenTool, UserPlus } from "lucide-react";
+import { ArrowRight, Megaphone, PackageOpen, PenTool } from "lucide-react";
 import StampBadge from "@/components/StampBadge";
 import { theme } from "@/data/theme";
 
 export default function Hero() {
   return (
-    <section className="section-shell grid min-h-[calc(100vh-8rem)] gap-10 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-16">
-      <div className="min-w-0 space-y-8">
-        <div className="space-y-5">
-          <h1 className="font-display text-6xl font-black uppercase leading-[0.88] sm:text-8xl lg:text-[9rem]">
+    <section className="section-shell grid gap-6 py-6 sm:gap-10 sm:py-10 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-16">
+      <div className="min-w-0 space-y-5 sm:space-y-8">
+        <div className="space-y-3 sm:space-y-5">
+          <h1 className="font-display text-[4.35rem] font-black uppercase leading-[0.84] sm:text-8xl lg:text-[9rem]">
             <span className="block">CJP</span>
             <span className="block">Action</span>
             <span className="block">Hub</span>
           </h1>
-          <p className="max-w-3xl font-editorial text-2xl font-bold leading-snug sm:text-3xl">
-            An independent community toolkit for people who want to follow, share, volunteer, and create for the
+          <p className="max-w-3xl font-editorial text-base font-bold leading-snug sm:text-3xl">
+            An independent community toolkit for people who want to follow, share, and create for the
             Cockroach Janta Party movement.
           </p>
-          <p className="max-w-2xl text-lg font-black uppercase text-stamp">Help the Swarm Grow.</p>
+          <p className="max-w-2xl text-sm font-black uppercase text-stamp sm:text-lg">Help the Swarm Grow.</p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
           <Link href="/follow" className="button-primary w-full max-w-full text-center">
             <Megaphone aria-hidden="true" size={18} />
-            Follow Official Channels
+            <span className="sm:hidden">Follow</span>
+            <span className="hidden sm:inline">Follow Official Channels</span>
           </Link>
           <Link href="/tools#share-card-generator" className="button-secondary w-full max-w-full text-center">
             <PenTool aria-hidden="true" size={18} />
-            Make a Share Card
+            <span className="sm:hidden">Make Card</span>
+            <span className="hidden sm:inline">Make a Share Card</span>
           </Link>
           <Link href="/manifesto" className="button-secondary w-full max-w-full text-center">
-            Share the 5 Demands <ArrowRight aria-hidden="true" size={18} />
+            <span className="sm:hidden">5 Demands</span>
+            <span className="hidden sm:inline">Share the 5 Demands</span> <ArrowRight aria-hidden="true" size={18} />
           </Link>
-          <Link href="/#volunteer" className="button-secondary w-full max-w-full text-center">
-            <UserPlus aria-hidden="true" size={18} />
-            Volunteer Your Skills
+          <Link href="/creator-kit" className="button-secondary w-full max-w-full text-center">
+            <PackageOpen aria-hidden="true" size={18} />
+            <span className="sm:hidden">Creator Kit</span>
+            <span className="hidden sm:inline">Open Creator Kit</span>
           </Link>
         </div>
         <div className="grid grid-cols-2 border-2 border-ink bg-newsprint shadow-brutal sm:grid-cols-4" aria-label="Movement stats">
           {theme.stats.map((stat) => (
-            <div key={stat.label} className="border-b border-r border-ink p-4 last:border-r-0 sm:border-b-0">
-              <p className="font-display text-5xl font-black leading-none text-stamp">{stat.value}</p>
-              <p className="mt-1 text-xs font-black uppercase leading-tight text-coal">{stat.label}</p>
+            <div key={stat.label} className="border-b border-r border-ink p-2.5 last:border-r-0 sm:border-b-0 sm:p-4">
+              <p className="font-display text-3xl font-black leading-none text-stamp sm:text-5xl">{stat.value}</p>
+              <p className="mt-1 text-[10px] font-black uppercase leading-tight text-coal sm:text-xs">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="relative min-h-[560px] min-w-0">
+      <div className="relative hidden min-h-[560px] min-w-0 lg:block">
         <div className="absolute left-4 top-4 z-10">
           <StampBadge>Supporter Made</StampBadge>
         </div>
@@ -54,7 +58,7 @@ export default function Hero() {
             <div className="border-b-4 border-ink pb-5 text-center">
               <p className="text-xs font-black uppercase tracking-[0.2em]">Community Toolkit · Volume 1</p>
               <p className="mt-3 font-display text-6xl font-black uppercase leading-none">Follow. Share.</p>
-              <p className="font-display text-6xl font-black uppercase leading-none text-stamp">Volunteer. Create.</p>
+              <p className="font-display text-6xl font-black uppercase leading-none text-stamp">Create. Verify.</p>
             </div>
             <div className="grid gap-4 py-8">
               <div className="border-2 border-ink bg-paper p-5">

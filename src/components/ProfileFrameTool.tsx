@@ -202,19 +202,20 @@ export default function ProfileFrameTool() {
 
   return (
     <PosterCard className="md:col-span-2">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+      <div className="grid gap-4 sm:gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
         <div className="min-w-0">
           <p className="section-kicker">Profile picture frame</p>
-          <h3 className="safe-text mt-2 font-display text-5xl font-black uppercase leading-none">
+          <h3 className="safe-text mt-2 font-display text-4xl font-black uppercase leading-none sm:text-5xl">
             Upload your face.
           </h3>
-          <p className="safe-text mt-3 text-sm font-bold leading-relaxed text-coal">
+          <p className="safe-text mt-2 text-sm font-bold leading-relaxed text-coal sm:mt-3">
             Make a supporter profile graphic locally in your browser. The file never leaves this device.
           </p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-5 sm:gap-3">
             <label className="button-primary cursor-pointer">
               <ImagePlus aria-hidden="true" size={18} />
-              Choose image
+              <span className="sm:hidden">Image</span>
+              <span className="hidden sm:inline">Choose image</span>
               <input
                 type="file"
                 accept="image/*,.avif,.bmp,.gif,.jpeg,.jpg,.png,.svg,.webp"
@@ -224,10 +225,11 @@ export default function ProfileFrameTool() {
             </label>
             <button type="button" onClick={downloadFrame} disabled={!imageSrc} className="button-secondary disabled:opacity-50">
               <Download aria-hidden="true" size={18} />
-              {status}
+              <span className="sm:hidden">Download</span>
+              <span className="hidden sm:inline">{status}</span>
             </button>
           </div>
-          <div className="mt-4 grid gap-2 sm:grid-cols-2" role="radiogroup" aria-label="Profile frame shape">
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4" role="radiogroup" aria-label="Profile frame shape">
             {(["round", "square"] as FrameShape[]).map((option) => (
               <button
                 key={option}
@@ -245,7 +247,7 @@ export default function ProfileFrameTool() {
               </button>
             ))}
           </div>
-          <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-black uppercase text-coal">
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] font-black uppercase text-coal sm:mt-4 sm:gap-3 sm:text-xs">
             <span className="safe-text">{fileName || "No image selected"}</span>
             <span>{shapeLabel} frame</span>
             {imageSrc && (
@@ -257,8 +259,8 @@ export default function ProfileFrameTool() {
           </div>
           {error && <p className="safe-text mt-3 text-sm font-black uppercase text-stamp">{error}</p>}
         </div>
-        <div className="grid place-items-center border-2 border-ink bg-paper p-4 shadow-[4px_4px_0_rgb(var(--ink))]">
-          <div className="paper-edge grid aspect-square w-full max-w-[360px] place-items-center border-2 border-stamp bg-newsprint p-6">
+        <div className="grid place-items-center border-2 border-ink bg-paper p-3 shadow-[4px_4px_0_rgb(var(--ink))] sm:p-4">
+          <div className="paper-edge grid aspect-square w-full max-w-[260px] place-items-center border-2 border-stamp bg-newsprint p-4 sm:max-w-[360px] sm:p-6">
             <div
               className={cn(
                 "grid aspect-square w-full place-items-center overflow-hidden border-[8px] border-ink bg-paper",

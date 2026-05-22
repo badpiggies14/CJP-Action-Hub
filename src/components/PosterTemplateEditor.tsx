@@ -584,20 +584,21 @@ export default function PosterTemplateEditor() {
 
   return (
     <PosterCard className="md:col-span-2" id="poster-template-editor">
-      <div className="grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+      <div className="grid gap-4 sm:gap-6 xl:grid-cols-[0.92fr_1.08fr]">
         <div className="min-w-0">
           <p className="section-kicker">Poster template</p>
-          <h3 className="safe-text mt-2 font-display text-5xl font-black uppercase leading-none">
+          <h3 className="safe-text mt-2 font-display text-4xl font-black uppercase leading-none sm:text-5xl">
             Build your poster.
           </h3>
-          <p className="safe-text mt-3 text-sm font-bold leading-relaxed text-coal">
+          <p className="safe-text mt-2 text-sm font-bold leading-relaxed text-coal sm:mt-3">
             Edit only the headline, main message, subheadline, and demand lines. The poster frame stays locked to the
             rally-newspaper template.
           </p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid grid-cols-2 gap-2.5 sm:mt-5 sm:gap-3">
             <button type="button" onClick={downloadPoster} className="button-primary">
               <Download aria-hidden="true" size={18} />
-              {status}
+              <span className="sm:hidden">Download</span>
+              <span className="hidden sm:inline">{status}</span>
             </button>
             <a href="/creator-kit/poster-template.svg" className="button-secondary" download>
               <FileDown aria-hidden="true" size={18} />
@@ -609,7 +610,7 @@ export default function PosterTemplateEditor() {
             </button>
           </div>
 
-          <div className="mt-5 grid gap-4">
+          <div className="mt-4 grid gap-3 sm:mt-5 sm:gap-4">
             {posterTemplateFieldGroups.map((group, index) => (
               <details key={group.title} open={index === 0} className="border-2 border-ink bg-paper">
                 <summary className="cursor-pointer px-4 py-3 text-sm font-black uppercase">
@@ -643,7 +644,7 @@ export default function PosterTemplateEditor() {
 
         <div className="grid min-w-0 place-items-center xl:sticky xl:top-32 xl:self-start">
           <div
-            className="poster-template-preview paper-edge relative aspect-[4/5] w-full max-w-[590px] overflow-hidden border-[10px] border-ink bg-paper p-[3.2%] shadow-brutal"
+            className="poster-template-preview paper-edge relative aspect-[4/5] w-full max-w-[330px] overflow-hidden border-[7px] border-ink bg-paper p-[3.2%] shadow-brutal sm:max-w-[590px] sm:border-[10px]"
             aria-label="Editable poster preview"
           >
             <div className="absolute inset-[2.8%] border-[3px] border-stamp" />

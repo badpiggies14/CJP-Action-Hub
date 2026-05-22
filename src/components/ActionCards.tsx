@@ -43,11 +43,11 @@ const quickActions: QuickAction[] = [
   },
   {
     time: "5 min",
-    title: "Volunteer a skill",
-    body: "Design, research, edit, translate, moderate, write, or build.",
-    href: "/#volunteer",
-    button: "Volunteer",
-    progressId: "volunteered"
+    title: "Open creator kit",
+    body: "Download clean resources, copy hashtags, and keep supporter-made graphics clearly marked.",
+    href: "/creator-kit",
+    button: "Open kit",
+    progressId: "used-creator-kit"
   }
 ];
 
@@ -65,38 +65,38 @@ export default function ActionCards({ compact = false }: { compact?: boolean }) 
   }
 
   return (
-    <section className={cn("section-shell", compact ? "py-8" : "py-16")} aria-labelledby="quick-actions-title">
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <section className={cn("section-shell", compact ? "py-7 sm:py-8" : "py-10 sm:py-16")} aria-labelledby="quick-actions-title">
+      <div className="mb-5 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div>
           <p className="section-kicker">Help in 30 seconds</p>
           <h2 id="quick-actions-title" className="section-title mt-2">
             Pick Your Speed.
           </h2>
         </div>
-        <p className="max-w-xl text-base font-bold text-coal">
+        <p className="max-w-xl text-sm font-bold text-coal sm:text-base">
           You have 10 seconds, 30 seconds, 2 minutes, or 5 minutes. Choose one honest action and move.
         </p>
       </div>
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
         {quickActions.map((action) => {
           const done = progress[action.progressId];
           return (
-            <PosterCard key={action.title} className={cn("min-h-[260px]", done && "!bg-ink !text-paper")}>
-              <div className="flex h-full flex-col justify-between gap-5">
-                <div className="space-y-4">
+            <PosterCard key={action.title} className={cn("min-h-0 sm:min-h-[260px]", done && "!bg-ink !text-paper")}>
+              <div className="flex h-full flex-col justify-between gap-3 sm:gap-5">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center justify-between gap-3">
-                    <span className={cn("inline-flex items-center gap-2 border-2 px-3 py-1 text-sm font-black uppercase", done ? "border-paper text-paper" : "border-stamp text-stamp")}>
-                      <Clock3 aria-hidden="true" size={16} />
+                    <span className={cn("inline-flex items-center gap-1.5 border-2 px-2 py-1 text-[11px] font-black uppercase sm:gap-2 sm:px-3 sm:text-sm", done ? "border-paper text-paper" : "border-stamp text-stamp")}>
+                      <Clock3 aria-hidden="true" size={14} />
                       {action.time}
                     </span>
-                    {done && <CheckCircle2 aria-label="Completed" className="text-paper" size={24} />}
+                    {done && <CheckCircle2 aria-label="Completed" className="text-paper" size={20} />}
                   </div>
-                  <h3 className="font-display text-4xl font-black uppercase leading-none">{action.title}</h3>
-                  <p className={cn("text-sm font-bold leading-relaxed", done ? "text-paper/80" : "text-coal")}>
+                  <h3 className="safe-text font-display text-[1.72rem] font-black uppercase leading-none sm:text-4xl">{action.title}</h3>
+                  <p className={cn("hidden text-sm font-bold leading-relaxed sm:block", done ? "text-paper/80" : "text-coal")}>
                     {action.body}
                   </p>
                 </div>
-                <div className="grid gap-3">
+                <div className="grid gap-2 sm:gap-3">
                   <Link
                     href={action.href}
                     onClick={() => markDone(action.progressId)}
@@ -109,7 +109,8 @@ export default function ActionCards({ compact = false }: { compact?: boolean }) 
                     onClick={() => markDone(action.progressId)}
                     className={done ? "button-ghost border-paper text-paper hover:bg-paper hover:text-ink" : "button-ghost"}
                   >
-                    {done ? "Marked done" : "Mark done"}
+                    <span className="sm:hidden">{done ? "Done" : "Done?"}</span>
+                    <span className="hidden sm:inline">{done ? "Marked done" : "Mark done"}</span>
                   </button>
                 </div>
               </div>

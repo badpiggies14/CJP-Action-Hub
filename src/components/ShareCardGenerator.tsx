@@ -79,7 +79,7 @@ const templates: ShareTemplate[] = [
     name: "Together We Survive",
     defaultText: "Together we survive.",
     kicker: "People's Banner",
-    caption: "Together we survive. Follow, share, volunteer, create."
+    caption: "Together we survive. Follow, share, create, verify."
   },
   {
     id: "manifesto",
@@ -141,21 +141,21 @@ export default function ShareCardGenerator() {
   }
 
   return (
-    <section id="share-card-generator" className="section-shell py-16" aria-labelledby="share-card-title">
-      <div className="mb-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+    <section id="share-card-generator" className="section-shell py-10 sm:py-16" aria-labelledby="share-card-title">
+      <div className="mb-5 grid gap-4 sm:mb-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <div>
           <p className="section-kicker">Share cards generator</p>
           <h2 id="share-card-title" className="section-title mt-2">
             Generate Another Rant.
           </h2>
         </div>
-        <p className="text-base font-bold leading-relaxed text-coal">
+        <p className="text-sm font-bold leading-relaxed text-coal sm:text-base">
           Browser-only PNG cards. No upload, no account, no backend. Watermark can be hidden, but the ethical note stays
           on the graphic.
         </p>
       </div>
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <PosterCard className="grid gap-5">
+      <div className="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <PosterCard className="grid gap-4 sm:gap-5">
           <label className="grid gap-2 text-sm font-black uppercase">
             Template
             <select value={templateId} onChange={(event) => selectTemplate(event.target.value)} className="input-field">
@@ -171,7 +171,7 @@ export default function ShareCardGenerator() {
             <textarea
               value={text}
               onChange={(event) => setText(event.target.value)}
-              className="input-field min-h-32 resize-y"
+              className="input-field min-h-24 resize-y sm:min-h-32"
               maxLength={120}
             />
           </label>
@@ -198,14 +198,16 @@ export default function ShareCardGenerator() {
             />
             Show CJP Action Hub watermark
           </label>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
             <button type="button" onClick={download} className="button-primary">
               <Download aria-hidden="true" size={18} />
-              {status}
+              <span className="sm:hidden">Download</span>
+              <span className="hidden sm:inline">{status}</span>
             </button>
             <button type="button" onClick={randomize} className="button-secondary">
               <Shuffle aria-hidden="true" size={18} />
-              Generate Another Rant
+              <span className="sm:hidden">Random</span>
+              <span className="hidden sm:inline">Generate Another Rant</span>
             </button>
             <CopyButton
               text={caption}
@@ -222,25 +224,25 @@ export default function ShareCardGenerator() {
             Caption seed: {captionBank[0]} Edit before posting. Link people to official channels for official updates.
           </p>
         </PosterCard>
-        <div className="grid place-items-center border-2 border-ink bg-ink p-4 shadow-brutal sm:p-8">
+        <div className="grid place-items-center border-2 border-ink bg-ink p-3 shadow-brutal sm:p-8">
           <div
             className={cn(
-              "grid w-full max-w-[560px] place-items-center overflow-hidden border-[10px] border-black bg-paper p-8 text-center shadow-[0_20px_50px_rgb(0_0_0_/_0.35)]",
-              size.height > size.width ? "max-h-[720px]" : "max-h-[520px]"
+              "grid w-full max-w-[560px] place-items-center overflow-hidden border-[7px] border-black bg-paper p-4 text-center shadow-[0_20px_50px_rgb(0_0_0_/_0.35)] sm:border-[10px] sm:p-8",
+              size.height > size.width ? "max-h-[520px] sm:max-h-[720px]" : "max-h-[360px] sm:max-h-[520px]"
             )}
             style={{ aspectRatio: `${size.width}/${size.height}` }}
             aria-label="Share card preview"
           >
-            <div className="flex h-full w-full flex-col justify-between border-2 border-stamp p-4 sm:p-6">
+            <div className="flex h-full w-full flex-col justify-between border-2 border-stamp p-3 sm:p-6">
               <div className="text-left">
                 <p className="text-[10px] font-black uppercase tracking-[0.14em] sm:text-xs">
                   Independent supporter-made graphic
                 </p>
-                <p className="mt-2 break-words font-display text-xl font-black uppercase leading-none text-stamp sm:text-4xl">
+                <p className="mt-2 break-words font-display text-lg font-black uppercase leading-none text-stamp sm:text-4xl">
                   {selectedTemplate.kicker}
                 </p>
               </div>
-              <p className="safe-text text-balance max-w-full break-words font-display text-3xl font-black uppercase leading-[0.95] sm:text-6xl">
+              <p className="safe-text text-balance max-w-full break-words font-display text-2xl font-black uppercase leading-[0.95] sm:text-6xl">
                 <Type aria-hidden="true" className="mx-auto mb-4 text-stamp" size={32} />
                 {text}
               </p>

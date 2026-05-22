@@ -6,7 +6,6 @@ export type LinkKey =
   | "telegram"
   | "email"
   | "pressEmail"
-  | "volunteerForm"
   | "correctionEmail";
 
 export const links: Record<LinkKey, string> = {
@@ -17,7 +16,6 @@ export const links: Record<LinkKey, string> = {
   telegram: "",
   email: "",
   pressEmail: "",
-  volunteerForm: "",
   correctionEmail: ""
 };
 
@@ -72,12 +70,6 @@ export const followLinks: FollowLink[] = [
     label: "Press Contact",
     description: "Official press email pending.",
     kind: "email"
-  },
-  {
-    key: "volunteerForm",
-    label: "Volunteer Form",
-    description: "External volunteer form pending.",
-    kind: "form"
   }
 ];
 
