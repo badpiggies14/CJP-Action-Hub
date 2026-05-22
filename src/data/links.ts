@@ -35,41 +35,11 @@ export const followLinks: FollowLink[] = [
     kind: "url"
   },
   {
-    key: "x",
-    label: "X / Twitter",
-    description: "Official social link pending.",
-    kind: "url"
-  },
-  {
     key: "instagram",
     label: "Instagram",
     description: "Follow the official Instagram page.",
     kind: "url",
     qrImage: "/qr/instagram.png"
-  },
-  {
-    key: "youtube",
-    label: "YouTube",
-    description: "Official social link pending.",
-    kind: "url"
-  },
-  {
-    key: "telegram",
-    label: "Telegram",
-    description: "Official community link pending.",
-    kind: "url"
-  },
-  {
-    key: "email",
-    label: "Email",
-    description: "Official email pending.",
-    kind: "email"
-  },
-  {
-    key: "pressEmail",
-    label: "Press Contact",
-    description: "Official press email pending.",
-    kind: "email"
   }
 ];
 

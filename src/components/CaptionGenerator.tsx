@@ -13,17 +13,12 @@ import {
   CaptionTopic,
   generateCaptions
 } from "@/data/captions";
-import { readProgress, saveProgress } from "@/lib/localStorage";
 
 export default function CaptionGenerator() {
   const [platform, setPlatform] = useState<CaptionPlatform>("X / Twitter");
   const [tone, setTone] = useState<CaptionTone>("Funny");
   const [topic, setTopic] = useState<CaptionTopic>("Five demands");
   const captions = useMemo(() => generateCaptions(platform, tone, topic), [platform, tone, topic]);
-
-  function markCopied() {
-    saveProgress({ ...readProgress(), "copied-caption": true });
-  }
 
   return (
     <section id="caption-generator" className="section-shell py-10 sm:py-16" aria-labelledby="caption-generator-title">
@@ -86,7 +81,7 @@ export default function CaptionGenerator() {
                     {platform} / {tone} / {topic}
                   </div>
                   <p className="text-sm font-bold leading-relaxed text-coal sm:text-base">{caption}</p>
-                  <CopyButton text={caption} label="Copy caption" className="mt-4" onCopied={markCopied} />
+                  <CopyButton text={caption} label="Copy caption" className="mt-4" />
                 </div>
               </div>
             </PosterCard>

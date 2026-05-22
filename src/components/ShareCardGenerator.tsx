@@ -1,11 +1,10 @@
 "use client";
 
-import { Download, RefreshCcw, Shuffle, Type } from "lucide-react";
+import { Download, RefreshCcw, Shuffle } from "lucide-react";
 import { useMemo, useState } from "react";
 import CopyButton from "@/components/CopyButton";
 import PosterCard from "@/components/PosterCard";
 import { cardSizes, CardSizeKey, downloadCanvas, drawShareCard } from "@/lib/download";
-import { readProgress, saveProgress } from "@/lib/localStorage";
 import { captionBank, hashtagBank } from "@/data/captions";
 import { cn } from "@/lib/cn";
 
@@ -131,8 +130,6 @@ export default function ShareCardGenerator() {
         showWatermark
       });
       downloadCanvas(canvas, `cjp-action-hub-${selectedTemplate.id}-${size.width}x${size.height}.png`);
-      const progress = readProgress();
-      saveProgress({ ...progress, "downloaded-card": true });
       setStatus("Downloaded");
     } catch {
       setStatus("Try again");
@@ -201,7 +198,7 @@ export default function ShareCardGenerator() {
           <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
             <button type="button" onClick={download} className="button-primary">
               <Download aria-hidden="true" size={18} />
-              <span className="sm:hidden">Download</span>
+              <span className="sm:hidden">{status.replace(" PNG", "")}</span>
               <span className="hidden sm:inline">{status}</span>
             </button>
             <button type="button" onClick={randomize} className="button-secondary">
@@ -213,7 +210,6 @@ export default function ShareCardGenerator() {
               text={caption}
               label="Copy caption"
               className="sm:col-span-1"
-              onCopied={() => saveProgress({ ...readProgress(), "copied-caption": true })}
             />
             <button type="button" onClick={reset} className="button-ghost">
               <RefreshCcw aria-hidden="true" size={18} />
@@ -227,28 +223,62 @@ export default function ShareCardGenerator() {
         <div className="grid place-items-center border-2 border-ink bg-ink p-3 shadow-brutal sm:p-8">
           <div
             className={cn(
-              "grid w-full max-w-[560px] place-items-center overflow-hidden border-[7px] border-black bg-paper p-4 text-center shadow-[0_20px_50px_rgb(0_0_0_/_0.35)] sm:border-[10px] sm:p-8",
+              "paper-edge relative grid w-full max-w-[560px] place-items-center overflow-hidden border-[9px] border-black bg-paper p-[5%] text-center shadow-[0_20px_50px_rgb(0_0_0_/_0.35)] sm:border-[12px]",
               size.height > size.width ? "max-h-[520px] sm:max-h-[720px]" : "max-h-[360px] sm:max-h-[520px]"
             )}
             style={{ aspectRatio: `${size.width}/${size.height}` }}
             aria-label="Share card preview"
           >
-            <div className="flex h-full w-full flex-col justify-between border-2 border-stamp p-3 sm:p-6">
-              <div className="text-left">
-                <p className="text-[10px] font-black uppercase tracking-[0.14em] sm:text-xs">
-                  Independent supporter-made graphic
-                </p>
-                <p className="mt-2 break-words font-display text-lg font-black uppercase leading-none text-stamp sm:text-4xl">
-                  {selectedTemplate.kicker}
+            <div className="absolute inset-[3.2%] border-[3px] border-stamp" />
+            <div className="absolute inset-[5%] border border-ink/70" />
+            <div className="relative z-10 flex h-full w-full flex-col justify-between">
+              <div className="grid gap-[3%]">
+                <div className="grid grid-cols-[23%_1fr] gap-[2%]">
+                  <div className="flex items-center gap-[5%] border-2 border-ink bg-paper p-[3%]">
+                    <span className="grid aspect-[1.25] flex-1 place-items-center bg-ink font-display text-[clamp(0.8rem,5cqw,2rem)] font-black text-paper">
+                      CJP
+                    </span>
+                    <span className="font-display text-[clamp(0.9rem,4.5cqw,1.7rem)] font-black text-stamp">*</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-[2%] bg-ink px-[4%] py-[2%] text-paper">
+                    <span className="font-display text-[clamp(0.46rem,2.3cqw,0.95rem)] font-black uppercase">
+                      Cockroach Janta Party
+                    </span>
+                    <span className="text-stamp">*</span>
+                    <span className="text-[clamp(0.4rem,1.8cqw,0.75rem)] font-black">Independent graphic</span>
+                    <span className="text-stamp">*</span>
+                  </div>
+                </div>
+                <div className="ml-auto flex w-[42%] items-center justify-between border-y-2 border-stamp py-[2%] text-[#5b5b35]">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <span key={index} className="font-display text-[clamp(0.75rem,4cqw,1.5rem)] font-black">*</span>
+                  ))}
+                </div>
+              </div>
+              <div className="grid gap-[5%]">
+                <div className="mx-auto w-fit rotate-[-1deg] bg-[#5b5b35] px-[6%] py-[2%] text-paper shadow-[4px_4px_0_rgb(var(--ink))]">
+                  <p className="font-display text-[clamp(1rem,4.8cqw,2.1rem)] font-black uppercase leading-none">
+                    {selectedTemplate.kicker}
+                  </p>
+                </div>
+                <p className="safe-text mx-auto max-w-[94%] whitespace-pre-line break-normal font-display text-[clamp(1.55rem,8.4cqw,4.4rem)] font-black uppercase leading-[0.9] text-ink [overflow-wrap:normal] [text-wrap:balance]">
+                  {text}
                 </p>
               </div>
-              <p className="safe-text text-balance max-w-full break-words font-display text-2xl font-black uppercase leading-[0.95] sm:text-6xl">
-                <Type aria-hidden="true" className="mx-auto mb-4 text-stamp" size={32} />
-                {text}
-              </p>
-              <div className="flex items-end justify-between gap-3 text-[10px] font-black uppercase sm:text-xs">
-                <span>Independent supporter-made graphic</span>
-                {showWatermark && <span>CJP Action Hub</span>}
+              <div className="grid gap-[2%]">
+                <div className="bg-ink px-[4%] py-[2.5%] text-paper">
+                  <p className="font-display text-[clamp(0.85rem,3.8cqw,1.7rem)] font-black uppercase leading-none">
+                    Follow / Share / Read / Verify
+                  </p>
+                </div>
+                <div className="grid grid-cols-[1fr_auto] items-center gap-3 bg-stamp px-[4%] py-[2%] text-left text-paper">
+                  <span className="text-[clamp(0.48rem,1.8cqw,0.78rem)] font-black uppercase tracking-[0.08em]">
+                    Independent supporter-made graphic
+                  </span>
+                  {showWatermark && (
+                    <span className="text-[clamp(0.5rem,1.9cqw,0.82rem)] font-black uppercase">CJP Action Hub</span>
+                  )}
+                </div>
               </div>
             </div>
           </div>

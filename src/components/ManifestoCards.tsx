@@ -6,7 +6,6 @@ import { theme } from "@/data/theme";
 import CopyButton from "@/components/CopyButton";
 import PosterCard from "@/components/PosterCard";
 import { downloadCanvas, drawCanvasLogo, drawFittedText, drawPosterBase } from "@/lib/download";
-import { readProgress, saveProgress } from "@/lib/localStorage";
 import { shareText } from "@/lib/share";
 
 async function drawManifestoCard(demand: ManifestoDemand) {
@@ -99,19 +98,13 @@ async function drawManifestoCard(demand: ManifestoDemand) {
 export default function ManifestoCards({ preview = false }: { preview?: boolean }) {
   const demands = preview ? manifestoDemands.slice(0, 3) : manifestoDemands;
 
-  function markRead() {
-    saveProgress({ ...readProgress(), "read-demands": true });
-  }
-
   async function download(demand: ManifestoDemand) {
     const canvas = await drawManifestoCard(demand);
     downloadCanvas(canvas, `cjp-action-hub-demand-${demand.id}.png`);
-    markRead();
   }
 
   async function share(demand: ManifestoDemand) {
     await shareText(`CJP manifesto demand ${demand.id}`, `${demand.title}\n\n${demand.demand}`, manifestoSource.href);
-    markRead();
   }
 
   return (
@@ -157,7 +150,6 @@ export default function ManifestoCards({ preview = false }: { preview?: boolean 
                 <CopyButton
                   text={`${demand.title}\n\n${demand.demand}\n\n${manifestoSource.href}`}
                   label="Copy caption"
-                  onCopied={markRead}
                 />
                 <button type="button" onClick={() => download(demand)} className="button-primary">
                   <Download aria-hidden="true" size={16} />

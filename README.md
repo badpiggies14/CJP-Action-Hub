@@ -2,17 +2,16 @@
 
 Independent community support/action hub for Cockroach Janta Party supporters.
 
-This is a static Next.js + TypeScript + Tailwind frontend. It has no backend, no authentication, no database, no paid APIs, and no analytics. Client-side tools use browser APIs and localStorage only.
+This is a static Next.js + TypeScript + Tailwind frontend. It has no backend, no authentication, no database, no paid APIs, and no analytics. Client-side tools use browser APIs only.
 
 ## What It Includes
 
-- Home page with editorial hero, ticker, quick action cards, stats strip, manifesto preview, creator kit preview, social follow block, local progress checklist, and disclaimer.
-- Follow page with configurable official links, QR codes, copy/open/download actions, and pending-link states.
-- Share-card generator with templates, editable text, card sizes, PNG download, caption copy, reset, and randomize.
+- Home page with editorial hero, ticker, stats strip, manifesto preview, creator kit preview, social follow block, and disclaimer.
+- Follow page with official website and Instagram links, QR codes, copy/open/download actions, and config-first link data.
+- Share-card generator with polished poster-style templates, editable text, card sizes, PNG download, caption copy, reset, and randomize.
 - Manifesto page with five official demands stored in `src/data/manifesto.ts`, neutral explainers, copy/share/download actions, and mobile carousel behavior.
 - Creator kit page with the locked editable poster template, profile-frame tool, caption bank, hashtag bank, color guide, and do/don't guide.
 - Press/explainer page with independent-status clarity and correction contact.
-- Local supporter checklist saved only in browser localStorage.
 - SEO metadata, Open Graph image, favicon, robots, and sitemap.
 
 ## Setup
@@ -44,10 +43,7 @@ Set real verified URLs only:
 
 ```ts
 officialWebsite: "https://cockroachjantaparty.org/",
-x: "",
-instagram: "",
-youtube: "",
-telegram: "",
+instagram: "https://www.instagram.com/cockroachjantaparty/",
 email: "",
 pressEmail: "",
 correctionEmail: ""

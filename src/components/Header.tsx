@@ -22,16 +22,15 @@ export default function Header() {
       </div>
       <div className="section-shell flex min-h-14 items-center justify-between gap-3 py-2 sm:min-h-16 sm:gap-4 sm:py-3">
         <Link href="/" className="focus-ring flex min-w-0 flex-1 items-center" aria-label="CJP Action Hub home">
-          <span className="relative block aspect-[420/50] w-[220px] max-w-[58vw] sm:w-[360px] xl:w-[420px]">
-            <Image
-              src="/cjp-logo.svg"
-              alt="Cockroach Janta Party logo"
-              fill
-              priority
-              sizes="(min-width: 1280px) 420px, (min-width: 640px) 360px, 58vw"
-              className="object-contain object-left"
-            />
-          </span>
+          <Image
+            src="/cjp-logo.svg"
+            alt="Cockroach Janta Party logo"
+            width={420}
+            height={50}
+            priority
+            sizes="(min-width: 1280px) 420px, (min-width: 640px) 360px, 58vw"
+            className="h-auto w-[220px] max-w-[58vw] object-contain object-left sm:w-[360px] xl:w-[420px]"
+          />
           <span className="sr-only">CJP Action Hub</span>
         </Link>
         <nav className="hidden items-center gap-2 xl:flex" aria-label="Primary navigation">
