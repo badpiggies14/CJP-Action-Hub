@@ -134,6 +134,75 @@ a[aria-disabled="true"] {
   hyphens: auto;
 }
 
+.poster-template-preview {
+  container-type: inline-size;
+}
+
+.poster-preview-logo {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.75rem, 4.5cqw, 1.9rem);
+}
+
+.poster-preview-party {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.44rem, 2.45cqw, 1rem);
+}
+
+.poster-preview-top-slogan {
+  font-size: clamp(0.42rem, 2.15cqw, 0.95rem);
+}
+
+.poster-preview-headline {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(2.05rem, 12.8cqw, 5rem);
+}
+
+.poster-preview-message {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(2rem, 11.7cqw, 4.6rem);
+}
+
+.poster-preview-description {
+  font-size: clamp(0.5rem, 2.35cqw, 0.95rem);
+}
+
+.poster-preview-ribbon {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.68rem, 4.2cqw, 1.55rem);
+}
+
+.poster-preview-star {
+  font-size: clamp(0.82rem, 4.5cqw, 1.9rem);
+}
+
+.poster-preview-stamp-small {
+  font-size: clamp(0.28rem, 1.35cqw, 0.62rem);
+}
+
+.poster-preview-stamp-main {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.85rem, 5.1cqw, 2.05rem);
+}
+
+.poster-preview-panel-title {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.74rem, 4.25cqw, 1.6rem);
+}
+
+.poster-preview-demand {
+  font-size: clamp(0.36rem, 1.85cqw, 0.78rem);
+}
+
+.poster-preview-cta {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.78rem, 4.7cqw, 1.9rem);
+}
+
+.poster-preview-footer {
+  font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+  font-size: clamp(0.34rem, 2.1cqw, 0.86rem);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -11,7 +11,7 @@ This is a static Next.js + TypeScript + Tailwind frontend. It has no backend, no
 - Share-card generator with templates, editable text, card sizes, PNG download, caption copy, reset, and randomize.
 - Manifesto page with five official demands stored in `src/data/manifesto.ts`, neutral explainers, copy/share/download actions, and mobile carousel behavior.
 - Volunteer section with skill cards and external form/email fallback.
-- Creator kit page with static assets under `public/creator-kit/`, caption bank, hashtag bank, color guide, meme prompts, and do/don't guide.
+- Creator kit page with the locked editable poster template, profile-frame tool, caption bank, hashtag bank, color guide, and do/don't guide.
 - Press/explainer page with independent-status clarity and correction contact.
 - Local supporter checklist saved only in browser localStorage.
 - SEO metadata, Open Graph image, favicon, robots, and sitemap.

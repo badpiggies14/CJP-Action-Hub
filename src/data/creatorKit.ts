@@ -7,36 +7,6 @@ export type CreatorKitItem = {
 
 export const creatorKitItems: CreatorKitItem[] = [
   {
-    title: "Poster template",
-    description: "A print-style supporter poster SVG.",
-    href: "/creator-kit/poster-template.svg",
-    type: "download"
-  },
-  {
-    title: "Profile picture frame",
-    description: "A square frame for supporter profile graphics.",
-    href: "/creator-kit/profile-frame.svg",
-    type: "download"
-  },
-  {
-    title: "WhatsApp status template",
-    description: "Vertical status card with clear supporter-made marking.",
-    href: "/creator-kit/whatsapp-status.svg",
-    type: "download"
-  },
-  {
-    title: "Instagram story template",
-    description: "A tall story layout for slogans and quick updates.",
-    href: "/creator-kit/story-template.svg",
-    type: "download"
-  },
-  {
-    title: "X/Twitter banner",
-    description: "Wide editorial banner placeholder.",
-    href: "/creator-kit/twitter-banner.svg",
-    type: "download"
-  },
-  {
     title: "Caption bank",
     description: "Ready-to-copy caption lines.",
     href: "/creator-kit/caption-bank.txt",
@@ -52,12 +22,6 @@ export const creatorKitItems: CreatorKitItem[] = [
     title: "Font/color guide",
     description: "Simple visual rules for consistent supporter graphics.",
     href: "/creator-kit/font-color-guide.txt",
-    type: "guide"
-  },
-  {
-    title: "Meme prompt ideas",
-    description: "Clean satire prompts for creator brainstorming.",
-    href: "/creator-kit/meme-prompts.txt",
     type: "guide"
   },
   {

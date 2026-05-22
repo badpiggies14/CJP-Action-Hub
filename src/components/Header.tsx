@@ -28,7 +28,8 @@ export default function Header() {
             width={420}
             height={50}
             priority
-            className="h-12 w-auto max-w-[58vw] object-contain object-left sm:h-14 sm:max-w-[360px] xl:max-w-[420px]"
+            className="w-auto max-w-[58vw] object-contain object-left sm:max-w-[360px] xl:max-w-[420px]"
+            style={{ height: "auto" }}
           />
           <span className="sr-only">CJP Action Hub</span>
         </Link>

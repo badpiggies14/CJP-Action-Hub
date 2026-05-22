@@ -1,9 +1,11 @@
 node_modules
 .next
+.next-build
 out
 dist
 output
 .playwright-cli
+.qa-output
 test-results
 .env*
 !.env.example

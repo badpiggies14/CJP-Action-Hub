@@ -1,13 +1,12 @@
-import { Download, FileArchive, Palette, ShieldCheck } from "lucide-react";
+import { FileArchive, Palette, ShieldCheck } from "lucide-react";
 import CopyButton from "@/components/CopyButton";
 import PosterCard from "@/components/PosterCard";
 import ProfileFrameTool from "@/components/ProfileFrameTool";
+import PosterTemplateEditor from "@/components/PosterTemplateEditor";
 import { captionBank, hashtagBank } from "@/data/captions";
-import { colorGuide, creatorKitItems, doGuide, dontGuide, downloadAllZip } from "@/data/creatorKit";
+import { colorGuide, doGuide, dontGuide, downloadAllZip } from "@/data/creatorKit";
 
 export default function CreatorKit() {
-  const staticItems = creatorKitItems.filter((item) => item.title !== "Profile picture frame");
-
   return (
     <section className="section-shell py-16" aria-labelledby="creator-kit-title">
       <div className="mb-8 grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
@@ -19,8 +18,7 @@ export default function CreatorKit() {
         </div>
         <div className="space-y-4">
           <p className="text-base font-bold leading-relaxed text-coal">
-            Static templates, caption banks, hashtag starters, and responsible sharing rules. Add new files in
-            /public/creator-kit/.
+            Editable poster tools, profile graphics, caption banks, hashtag starters, and responsible sharing rules.
           </p>
           {downloadAllZip ? (
             <a href={downloadAllZip} className="button-primary">
@@ -34,33 +32,12 @@ export default function CreatorKit() {
           )}
         </div>
       </div>
+      <div className="mb-6">
+        <PosterTemplateEditor />
+      </div>
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="grid gap-5 md:grid-cols-2">
           <ProfileFrameTool />
-          {staticItems.map((item) => (
-            <PosterCard key={item.title} className="h-full min-h-[310px]">
-              <div className="flex h-full flex-col gap-4">
-                <div className="min-w-0">
-                  <h3 className="safe-text min-h-[5.4rem] font-display text-[2.6rem] font-black uppercase leading-none">
-                    {item.title}
-                  </h3>
-                  <p className="safe-text mt-2 min-h-[3.6rem] text-sm font-bold leading-relaxed text-coal">
-                    {item.description}
-                  </p>
-                </div>
-                {item.href ? (
-                  <a href={item.href} className="button-secondary mt-auto min-h-14 w-full" download>
-                    <Download aria-hidden="true" size={16} />
-                    Download
-                  </a>
-                ) : (
-                  <span className="mt-auto min-h-14 border-2 border-ink px-4 py-2 text-sm font-black uppercase opacity-60">
-                    Pending
-                  </span>
-                )}
-              </div>
-            </PosterCard>
-          ))}
         </div>
         <div className="grid gap-5">
           <PosterCard>

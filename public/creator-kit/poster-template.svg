@@ -1,11 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350">
-  <rect width="1080" height="1350" fill="#f6ead0"/>
-  <rect x="70" y="70" width="940" height="1210" fill="none" stroke="#111" stroke-width="16"/>
-  <rect x="100" y="104" width="880" height="84" fill="#111"/>
-  <text x="540" y="164" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="58" fill="#f6ead0">CJP ACTION HUB</text>
-  <text x="540" y="430" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="118" fill="#111">POSTER</text>
-  <text x="540" y="545" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-size="118" fill="#111">TEMPLATE</text>
-  <rect x="190" y="680" width="700" height="210" fill="none" stroke="#b91c1c" stroke-width="12"/>
-  <text x="540" y="795" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#b91c1c">Add your line here</text>
-  <text x="540" y="1120" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#111">Independent supporter-made graphic</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">CJP rally poster template</title>
+  <desc id="desc">A vintage newspaper-rally poster with editable headline, message, description, and demand placeholders.</desc>
+  <defs>
+    <pattern id="paper-noise" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="8" r="1.1" fill="#111111" opacity="0.10"/>
+      <circle cx="18" cy="13" r="0.8" fill="#111111" opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="#f6ead0"/>
+  <rect width="1200" height="1500" fill="url(#paper-noise)"/>
+  <rect x="34" y="34" width="1132" height="1432" fill="none" stroke="#111111" stroke-width="22"/>
+  <rect x="58" y="58" width="1084" height="1384" fill="none" stroke="#b91c1c" stroke-width="7"/>
+  <rect x="72" y="72" width="1056" height="1356" fill="none" stroke="#111111" stroke-width="2"/>
+
+  <rect x="78" y="82" width="190" height="92" fill="#f6ead0" stroke="#111111" stroke-width="5"/>
+  <rect x="88" y="92" width="105" height="72" fill="#111111"/>
+  <text x="102" y="148" font-family="Impact, Arial Black, sans-serif" font-size="58" font-weight="900" fill="#f6ead0">CJP</text>
+  <text x="226" y="144" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="52" fill="#b91c1c">*</text>
+  <rect x="278" y="94" width="812" height="68" fill="#111111"/>
+  <text x="306" y="139" font-family="Impact, Arial Black, sans-serif" font-size="33" font-weight="900" fill="#f6ead0">COCKROACH JANTA PARTY</text>
+  <text x="710" y="143" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="38" fill="#b91c1c">*</text>
+  <text x="890" y="139" text-anchor="middle" font-family="Arial Black, Nirmala UI, sans-serif" font-size="24" font-weight="900" fill="#f6ead0">जनता का हक, जनता के साथ</text>
+  <text x="1056" y="143" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="38" fill="#b91c1c">*</text>
+
+  <text x="78" y="335" font-family="Impact, Arial Black, sans-serif" font-size="155" font-weight="900" fill="#111111">YOUR</text>
+  <text x="78" y="468" font-family="Impact, Arial Black, sans-serif" font-size="155" font-weight="900" fill="#111111">HEADLINE</text>
+  <text x="78" y="601" font-family="Impact, Arial Black, sans-serif" font-size="155" font-weight="900" fill="#111111">HERE</text>
+
+  <line x1="700" y1="230" x2="1060" y2="230" stroke="#b91c1c" stroke-width="4"/>
+  <line x1="700" y1="298" x2="1060" y2="298" stroke="#b91c1c" stroke-width="4"/>
+  <text x="893" y="280" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="42" fill="#5b5b35">* * * * *</text>
+  <circle cx="925" cy="492" r="118" fill="none" stroke="#5b5b35" stroke-width="4"/>
+  <circle cx="925" cy="492" r="98" fill="none" stroke="#5b5b35" stroke-width="4"/>
+  <text x="925" y="430" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="24" fill="#5b5b35">PEOPLE FIRST</text>
+  <text x="925" y="466" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="34" fill="#b91c1c">*</text>
+  <text x="925" y="522" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="54" fill="#5b5b35">CJP</text>
+  <text x="925" y="578" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" fill="#5b5b35">POWER TO THE PEOPLE</text>
+  <text x="858" y="520" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="32" fill="#5b5b35">*</text>
+  <text x="992" y="520" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="32" fill="#5b5b35">*</text>
+
+  <line x1="78" y1="748" x2="706" y2="748" stroke="#5b5b35" stroke-width="6"/>
+  <text x="128" y="850" font-family="Impact, Arial Black, sans-serif" font-size="92" font-weight="900" fill="#b91c1c">YOUR BIG</text>
+  <text x="128" y="933" font-family="Impact, Arial Black, sans-serif" font-size="92" font-weight="900" fill="#b91c1c">MESSAGE</text>
+  <path d="M98 828 L140 852 M98 850 L152 860 M98 872 L152 872 M98 894 L140 884 M674 828 L632 852 M674 850 L620 860 M674 872 L620 872 M674 894 L632 884" stroke="#b91c1c" stroke-width="4"/>
+  <text x="78" y="1048" font-family="Arial Black, sans-serif" font-size="26" fill="#111111">..........................................</text>
+  <text x="92" y="1080" font-family="Arial Black, sans-serif" font-size="25" fill="#111111">ADD YOUR SUBHEADLINE OR DESCRIPTION HERE.</text>
+  <text x="92" y="1114" font-family="Arial Black, sans-serif" font-size="25" fill="#111111">KEEP IT SHORT, CLEAR AND IMPACTFUL.</text>
+  <text x="92" y="1148" font-family="Arial Black, sans-serif" font-size="25" fill="#111111">THIS SPACE IS FOR 2 TO 4 LINES OF</text>
+  <text x="92" y="1182" font-family="Arial Black, sans-serif" font-size="25" fill="#111111">YOUR KEY MESSAGE OR PROMISE.</text>
+
+  <rect x="700" y="668" width="405" height="520" fill="none" stroke="#5b5b35" stroke-width="4"/>
+  <rect x="742" y="675" width="285" height="62" fill="#5b5b35" transform="rotate(-1.03 742 675)"/>
+  <text x="885" y="717" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="36" fill="#f6ead0">OUR DEMANDS</text>
+  <path d="M720 702 L692 690 M720 718 L690 718 M720 734 L692 746 M1074 702 L1102 690 M1074 718 L1104 718 M1074 734 L1102 746" stroke="#b91c1c" stroke-width="4"/>
+  <g font-family="Arial Black, sans-serif" font-size="27" fill="#111111">
+    <circle cx="770" cy="790" r="39" fill="#5b5b35"/><path d="M770 768 L790 778 L785 809 L770 819 L755 809 L750 778 Z" fill="none" stroke="#f6ead0" stroke-width="5"/><text x="840" y="782">ADD YOUR</text><text x="840" y="814">DEMAND HERE</text><line x1="808" y1="836" x2="1074" y2="836" stroke="#b91c1c" stroke-width="2" stroke-dasharray="9 8"/>
+    <circle cx="770" cy="892" r="39" fill="#5b5b35"/><circle cx="770" cy="876" r="9" fill="#f6ead0"/><circle cx="750" cy="887" r="7" fill="#f6ead0"/><circle cx="790" cy="887" r="7" fill="#f6ead0"/><text x="840" y="884">ADD YOUR</text><text x="840" y="916">DEMAND HERE</text><line x1="808" y1="938" x2="1074" y2="938" stroke="#b91c1c" stroke-width="2" stroke-dasharray="9 8"/>
+    <circle cx="770" cy="994" r="39" fill="#5b5b35"/><path d="M748 992 H793 V1021 H748 Z M760 980 V1020 M776 976 V1020 M790 985 V1020" fill="#f6ead0"/><text x="840" y="986">ADD YOUR</text><text x="840" y="1018">DEMAND HERE</text><line x1="808" y1="1040" x2="1074" y2="1040" stroke="#b91c1c" stroke-width="2" stroke-dasharray="9 8"/>
+    <circle cx="770" cy="1096" r="39" fill="#5b5b35"/><path d="M744 1094 L785 1073 L785 1117 Z M742 1085 H755 V1103 H742 Z" fill="#f6ead0"/><text x="840" y="1088">ADD YOUR</text><text x="840" y="1120">DEMAND HERE</text><line x1="808" y1="1142" x2="1074" y2="1142" stroke="#b91c1c" stroke-width="2" stroke-dasharray="9 8"/>
+  </g>
+
+  <rect x="70" y="1288" width="1060" height="90" fill="#111111"/>
+  <path d="M100 1312 L142 1334 M100 1334 L154 1334 M100 1356 L142 1334 M1100 1312 L1058 1334 M1100 1334 L1046 1334 M1100 1356 L1058 1334" stroke="#b91c1c" stroke-width="4"/>
+  <text x="600" y="1348" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="44" fill="#f6ead0">CALL TO ACTION / JOIN / SHARE / SPEAK UP</text>
+  <rect x="70" y="1388" width="1060" height="62" fill="#b91c1c"/>
+  <text x="102" y="1432" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="38" fill="#f6ead0">*</text>
+  <text x="240" y="1429" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#f6ead0">#YOURHASHTAG</text>
+  <line x1="420" y1="1399" x2="420" y2="1440" stroke="#f6ead0" stroke-width="2"/>
+  <text x="575" y="1429" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#f6ead0">YOURWEBSITE.COM</text>
+  <line x1="755" y1="1399" x2="755" y2="1440" stroke="#f6ead0" stroke-width="2"/>
+  <text x="1092" y="1432" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="38" fill="#f6ead0">*</text>
+  <text x="910" y="1429" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#f6ead0">YOUR TAGLINE HERE</text>
 </svg>
